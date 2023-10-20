@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/03ca4ba95f.js" crossorigin="anonymous"></script>
+    <title>sidec</title>
+    <style>
+        * {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+        body {
+            background: #f9feff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            left: 0;
+            background: #fff;
+            width: 70px;
+            overflow: hidden;
+            transition: width 0.2s linear;
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            text-align: center;
+            display: flex;
+            transition: all 0.5s ease;
+            margin: 10px 0 0 0 10px;
+        }
+        .logo img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-left: 15px;
+        }
+        .logo span {
+            font-weight: bold;
+            padding-left: 15px;
+            font-size: 18px;
+            margin-top: 5px;
+        }
+        a {
+            position: relative;
+            color: rgba(85, 83, 83);
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            width: 300px;
+            padding: 10px;
+            font-weight: 600;
+        }
+        .fas {
+            position: relative;
+            width: 60px;
+            height: 35px;
+            top: 14px;
+            font-size: 20px;
+            text-align: center;
+        }
+        .nav-item {
+            position: relative;
+            top: 0;
+            margin-left: 10px;
+            margin-top: 15px;
+        }
+        a:hover {
+            background: #f9feff;
+        }
+        nav:hover {
+            width: 280px;
+            transition: all 0.5s ease;
+        }
+        .logout {
+            position: absolute;
+            bottom: 0;
+        }
+        .animated-text {
+            font-size: 35px;
+            font-weight: 600;
+            min-width: 280px;
+            margin-bottom: 20px;
+            margin-top: 60px;
+            text-align: center;
+        }
+        .animated-text span {
+            position: relative;
+        }
+        .animated-text span::before {
+            content: "Ready";
+            color: #9835ff;
+            animation: words 20s infinite;
+        }
+        .animated-text span::after {
+            content: "";
+            position: absolute;
+            width: calc(100% + 8px);
+            height: 100%;
+            background-color: #f9feff;
+            border-left: 2px solid #9835ff;
+            right: -8px;
+            animation: cursor .8s infinite, typing 20s steps(14) infinite;
+        }
+        @keyframes cursor {
+            to {
+                border-left: 2px solid #f9feff;
+            }
+        }
+        @keyframes words {
+            0%, 20% {
+                content: "Ready";
+            }
+            21%, 40% {
+                content: "testfied";
+            }
+            41%, 60% {
+                content: "light";
+            }
+            61%, 80% {
+                content: "Sidec";
+            }
+            81%, 100% {
+                content: "Ready to succeed";
+            }
+        }
+        @keyframes typing {
+            10%,15%,30%,35%,50%,55%,70%,75%,90%,95% {
+                width: 0;
+            }
+            5%,20%,25%,40%,45%,60%,65%,80%,85%{
+                width: calc(100% + 8px);
+            }
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .button {
+            margin: 10px 0;
+            text-align: center;
+        }
+        .test-button, .download-button {
+            width: 200px;
+            padding: 10px;
+            font-weight: 600;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        .test-button {
+            background: #9835ff;
+            color: #fff;
+            text-align: center;
+        }
+        .test-button a {
+            text-align: center;
+        }
+        .download-button {
+            background: #f9feff;
+            border: 1px solid #9835ff;
+            color: #9835ff;
+        }
+        .test-button:hover {
+            background: #6c1db2;
+        }
+        .download-button:hover {
+            background: #9835ff;
+            color: #fff;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="#" class="logo">
+                    <img src="Images/Asset 6.png" alt="sidec">
+                    <span class="nav-item">Sidec blogspace</span>
+                </a>
+            </li>
+            <li><a href="index.html">
+                <i class="fas fa-home"></i>
+                <span class="nav-item">Home</span>
+            </a></li>
+            <li><a href="user.html">
+                <i class="fas fa-user"></i>
+                <span class="nav-item">Profile</span>
+            </a></li>
+            <li><a href="test.html">
+                <i class="fas fa-book-open-reader"></i>
+                <span class="nav-item">Test</span>
+            </a></li>
+            <li><a href="tutors.html">
+                <i class="fas fa-chalkboard-user"></i>
+                <span class="nav-item">Tutors</span>
+            </a></li>
+            <li><a href="message.html">
+                <i class="fas fa-message"></i>
+                <span class="nav-item">Messages</span>
+            </a></li>
+            <li><a href="notifications.html">
+                <i class="fas fa-bell"></i>
+                <span class="nav-item">Notifications</span>
+            </a></li>
+            <li><a href="settings.html">
+                <i class="fas fa-cog"></i>
+                <span class="nav-item">Settings</span>
+            </a></li>
+            <li><a href="faq.html">
+                <i class="fas fa-question-circle"></i>
+                <span class="nav-item">Help</span>
+            </a></li>
+            <li><a href="Login.html" class="logout">
+                <i class="fas fa-sign-out-alt"></i>
+                <span class="nav-item">Log out</span>
+            </a></li>
+        </ul>
+    </nav>
+    <div class="animated-text">
+        I am <span></span>
+    </div>
+    <p>For better user experience, we recommend you using larger screens</p>
+    <div class="button-container">
+        <div class="button">
+            <a href="testmain.html" class="test-button">
+                Test now
+            </a>
+        </div>
+        <div class="button">
+            <a href="download.html" class="download-button">
+                Download questions
+            </a>
+        </div>
+    </div>
+</body>
+</html>

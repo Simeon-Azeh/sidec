@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/03ca4ba95f.js" crossorigin="anonymous"></script>
+    <title>Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #E6E6FA;
+        }
+        .container {
+            position: relative;
+            max-width: 430px;
+            width: 100%;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .container .forms {
+            display: flex;
+            height: 440px;
+            width: 200%;
+            align-items: center;
+            transition: height 0.2s ease;
+        }
+        
+        .container.active .forms {
+            margin-top: 10px;
+            height: 650px;
+        }
+        .container .form {
+            width: 50%;
+            padding: 30px;
+            background-color: #fff;
+            transition: margin-left 0.18s ease;
+        }
+        .container.active .login {
+            margin-left: -50%;
+            opacity: 0;
+            transition: margin-left 0.18s ease, opacity 0.15s ease;
+        }
+        .container .signup {
+            opacity: 0;
+            transition: opacity 0.09s ease;
+        }
+        .container.active .signup {
+            opacity: 1;
+            margin-top: 20px;
+            transition: opacity 0.2s ease;
+        }
+        
+        .container .form .title {
+            position: relative;
+            font-size: 27px;
+            font-weight: 600;
+        }
+        .form .title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 30px;
+            background-color: #9835ff;
+            border-radius: 25px;
+        }
+        .form .input-field {
+            position: relative;
+            height: 50px;
+            width: 100%;
+            margin-top: 30px;
+        }
+        .input-field input {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            padding: 0 35px;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid #ccc;
+            border-top: 1px solid transparent;
+            font-size: 16px;
+            transition: all 0.2s ease;
+        }
+        .input-field input:is(:focus, :valid){
+            border-bottom-color: #9835ff;
+        }
+        .input-field input:is(:focus, :valid) ~ i{
+          color: #9835ff;
+        }
+        .input-field i {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+            transform: all 0.2s ease;
+        }
+        .input-field i.icon {
+            left: 0;
+        }
+        .input-field i.showHidePw {
+            right: 0; /* Corrected: Set the "right" position for the showHidePw icon */
+            cursor: pointer; /* Add cursor style for clickability */
+            padding: 10px;
+        }
+        .form .checkbox-text {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .checkbox-text .checkbox-content {
+            display: flex;
+            align-items: center;
+        }
+        .checkbox-content input {
+            margin: 0 8px -2px 4px;
+            accent-color: #9835ff;
+        }
+        .form .text {
+            color: #333;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .form a.text {
+            color: #9835ff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .form a:hover{
+            color: #999;
+        }
+        .form .button {
+            margin-top: 35px;
+        }
+        .form .button input {
+            border: none;
+            color: #fff;
+            font-size: 17px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            border-radius: 6px;
+            background-color: #9835ff;
+            cursor: pointer;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+        .button input:hover {
+            opacity: 1;
+        }
+
+        .form .login-signup {
+            margin-top: 25px;
+            text-align: center;
+        }
+           
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="forms">
+            <div class="form login">
+                <span class="title">Login</span>
+                <form action="#">
+                    <div class="input-field">
+                        <input type="email" placeholder="Enter your email" required>
+                        <i class="fa-solid fa-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Enter your password" required>
+                        <i class="fa-solid fa-lock icon"></i> 
+                        <i class="fa-solid fa-eye-slash showHidePw"></i>
+                    </div>
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="logCheck">
+                            <label for="logCheck" class="text">Remember me</label>
+                        </div>
+                        
+                        <a href="#" class="text">Forgot password?</a>
+                    </div>
+                    <div class="input-field button">
+                        <input type="button" value="Login">
+                    </div>
+                </form>
+                <div class="login-signup">
+                    <span class="text">Not a user?
+                        <a href="#" class="text signup-link">Sign up</a>
+                    </span>
+                </div>
+            </div>
+            <!--Registeration form-->
+            <div class="form signup">
+                <span class="title">Registration</span>
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter your name" required>
+                        <i class="fa-solid fa-user icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="email" placeholder="Enter your email" required>
+                        <i class="fa-solid fa-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="date" placeholder="Date of birth" required>
+                        <i class="fa-solid fa-calendar icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Enter password" required>
+                        <i class="fa-solid fa-lock icon"></i> 
+                        <i class="fa-solid fa-eye-slash showHidePw"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Confirm password" required>
+                        <i class="fa-solid fa-lock icon"></i> 
+                        <i class="fa-solid fa-eye-slash showHidePw"></i>
+                    </div>
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="logCheck">
+                            <label for="logCheck" class="text">I agree to sidec's <a href="#">privacy and cookie policies</a></label>
+                        </div>
+                    </div>
+                    <div class="input-field button">
+                        <input type="button" value="Sign up">
+                    </div>
+                </form>
+                <div class="login-signup">
+                    <span class="text">Already a user?
+                        <a href="#" class="text login-link">Login</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const container = document.querySelector(".container");
+        const pwShowHide = document.querySelectorAll(".showHidePw");
+        const pwFields = document.querySelectorAll(".password");
+        const signUp = document.querySelector(".signup-link"); // Use querySelector to select the first matching element
+        const login = document.querySelector(".login-link"); // Use querySelector to select the first matching element
+    
+        // Js code to show/hide password and change icon //
+        pwShowHide.forEach(eyeIcon => {
+            eyeIcon.addEventListener("click", () => {
+                pwFields.forEach(pwField => {
+                    if (pwField.type === "password") {
+                        pwField.type = "text";
+                        pwShowHide.forEach(icon => {
+                            icon.classList.replace("fa-eye-slash", "fa-eye");
+                        });
+                    } else {
+                        pwField.type = "password";
+                        pwShowHide.forEach(icon => {
+                            icon.classList.replace("fa-eye", "fa-eye-slash");
+                        });
+                    }
+                });
+            });
+        });
+    
+        // Js code to toggle between Login and Signup forms
+        signUp.addEventListener("click", () => {
+            container.classList.add("active");
+        });
+    
+        login.addEventListener("click", () => {
+            container.classList.remove("active");
+        });
+    </script>
+    
+    
+</body>
+</html>
