@@ -130,7 +130,7 @@
                 content: "testfied";
             }
             41%, 60% {
-                content: "light";
+                content: "passing GCE";
             }
             61%, 80% {
                 content: "Sidec";
@@ -187,7 +187,19 @@
             background: #9835ff;
             color: #fff;
         }
-        
+        .img-con {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .img-con img {
+            width: 300px;
+            height: 300px;
+            margin-top: -40px;
+        }
+        .alert-1 {
+            font-size: 18px;
+        }
     </style>
 </head>
 <body>
@@ -240,7 +252,11 @@
     <div class="animated-text">
         I am <span></span>
     </div>
-    <p>For better user experience, we recommend you using larger screens</p>
+    <div class="img-con">
+        <img src="Images/20231020_073607.png" alt="sidec_lady">
+    </div>
+    <p class="alert-1">For better user experience, we recommend you using larger screens</p>
+    <h5>You will get your result in 30minuites!</h5>
     <div class="button-container">
         <div class="button">
             <a href="testmain.html" class="test-button">
