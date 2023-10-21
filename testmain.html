@@ -2,10 +2,222 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://kit.fontawesome.com/03ca4ba95f.js" crossorigin="anonymous"></script>
+    <title>Test</title>
+    <style>
+        * {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f9feff;
+        }
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            background-color: #9835ff;
+            padding: 30px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+        }
+        .heading {
+            text-align: center;
+            font-size: 40px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #fff;
+            font-weight: 600;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            text-transform: capitalize;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            color: #9835ff;
+            font-weight: 600;
+        }
+        .btn {
+            width: 100%;
+            height: 60px;
+            background-color: #30d5c8;
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            margin-top: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s linear;
+        }
+        .btn:hover {
+           color: #9835ff;
+           background-color: #f9feff;
+        }
+        .btn:disabled {
+            background-color: #e53f71;
+        }
+        .hide {
+            display: none;
+        }
+        .timer {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        .timer .progress {
+            position: relative;
+            width: 100%;
+            height: 40px;
+            background-color: transparent;
+            border-radius: 30px;
+            overflow: hidden;
+            margin-bottom: 10px;
+            border: 2px solid #30d5c8;
+        }
+        .timer .progress .progress-bar {
+            width: 50%;
+            height: 100%;
+            border-radius: 30px;
+            overflow: hidden;
+            background: linear-gradient(to right, #30d5c8, #e53f71);
+            transition: 1s linear;
+        }
+        .timer .progress .progress-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #f9feff;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .question-wrapper .number {
+            color: #f9feff;
+            font-size: 25px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }.question-wrapper .number .total {
+            color: #30d5c8;
+           font-size: 18px;
+        }
+        .question-wrapper .question {
+            color: #f9feff;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .question-wrapper .answer-wrapper .answer {
+            width: 100%;
+            height: 60px;
+            padding: 20px;
+            border-radius: 10px;
+            color: #f9feff;
+            border: 2px solid #30d5c8;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: 0.3s linear;
+
+        }
+    </style>
 </head>
 <body>
-    
+   <div class="container">
+    <div class="start-screen hide">
+        <h1 class="heading">Test with<br>Sidec</h1>
+        <div class="settings">
+            <label for="num-questions">Number of Questions</label>
+            <select name="" id="num0qeustions">
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+                <option value="60">60</option>
+            </select>
+            <label for="category">Select subject</label>
+            <select name="" id="category">
+                <option value="10">Any subject</option>
+                <option value="15">Mathematics</option>
+                <option value="20">English</option>
+                <option value="30">Chemistry</option>
+                <option value="40">Physics</option>
+                <option value="50">Biology</option>
+                <option value="60">Further Maths</option>
+                <option value="10">Food science</option>
+                <option value="15">Geography</option>
+                <option value="20">History</option>
+                <option value="30">Philosophy</option>
+                <option value="40">Science</option>
+                <option value="50">Economy</option>
+                <option value="60">Computer science</option>
+                <option value="40">ICT</option>
+                <option value="50">Commerce</option>
+                <option value="60">Music</option>
+            </select>
+            <label for="difficulty">Select difficulty</label>
+            <select name="" id="difficulty">
+                <option value="10">Any difficulty</option>
+                <option value="15">Form 5 | Grade 10</option>
+                <option value="20">Lowersixth | Grade 11</option>
+                <option value="30">Uppersixth | Grade 12</option>
+            </select>
+            <label for="time">Time per question</label>
+            <select name="" id="time">
+                <option value="10">10 seconds</option>
+                <option value="15">15 seconds</option>
+                <option value="20">20 seconds</option>
+                <option value="30">30 seconds</option>
+                <option value="60">60 seconds</option>
+            </select>
+        </div>
+        <button class="btn start">Start graded test</button>
+    </div>
+    <div class="quiz">
+        <div class="timer">
+            <div class=" progress">
+                <div class="progress-bar"></div>
+                <span class="progress-text">50</span>
+            </div>
+        </div>
+        <div class="question-wrapper">
+            <div class="number">
+               Question <span class="current">1</span><span class="total">/10</span>
+            </div>
+            <div class="question">This is a Question</div>
+            <div class="answer-wrapper">
+                <div class="answer">
+                    <span class="text">answer</span>
+                    <span class="checkbox"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div> 
 </body>
 </html>
