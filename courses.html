@@ -23,7 +23,7 @@
             background: #f9feff;
         }
         nav {
-            position: absolute;
+            position: fixed;
             top: 0;
             bottom: 0;
             height: 100%;
@@ -33,6 +33,7 @@
             overflow: hidden;
             transition: width 0.2s linear;
             box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
         }
         .logo {
             text-align: center;
@@ -90,6 +91,163 @@
             position: absolute;
             bottom: 0;
         }
+    
+        .categories-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 80px;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.box img {
+    width: 50px; /* Adjust the size as needed */
+    height: 50px; /* Adjust the size as needed */
+    border-radius: 50%; /* Makes the image rounded */
+    border: 1px solid #9835ff;
+}
+.center-text {
+    text-align: center;
+    margin-top: 20px;
+}
+.center-text h5 {
+    color: #9835ff;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.center-text h2 {
+    font-size: var(--h2-font);
+    line-height: 1.2;
+}
+.box {
+    padding: 25px 20px;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    box-shadow: -11.729px -11.729px 32px rgba(255, 255, 255, /15%);
+    transition: all 0.40s ease;
+}
+/*I love this hover effect*/
+.box:hover {
+    transform: translateY(-15px);
+}
+.box h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.3;
+    transition: all 0.40s ease;
+}
+.box h3:hover {
+    color: #9835ff;
+}
+.box p {
+    font-size: 12px;
+    font-weight: 600;
+}
+.main-btn {
+    text-align: center;
+    margin-top: 5rem;
+    align-items: center;
+    justify-content: center;
+}
+.btn {
+    display: inline-block;
+    margin-top: -80px;
+    padding: 16px 30px;
+    background: #9835ff;
+    color: #fff;
+    border-radius: 10px;
+    transition: all .40s ease;
+}
+.btn:hover{
+    transform: scale(0.9) translateY(-5px);
+    background-color: #9835ff;
+}
+
+/* Additional styling for other elements as needed */
+.courses-content {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 0.1rem;
+   align-items: center;
+   margin-top: 2rem;
+   margin-left: 20px;
+   cursor: pointer;
+   border-radius: 10px;
+}
+.row {
+    width: calc(28.333% - 1rem);
+    background: #fff;
+    padding:0px 0px 10px 0px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
+    transition: all .40s ease;
+    margin-left: 20px;
+    margin-bottom: 1rem;
+}
+.row:hover {
+    transform: translateY(-15px);
+}
+.row img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
+}
+.course-text {
+    padding: 35px 20px;
+}
+.course-text h5 {
+    color: #9835ff;
+    font-size: 18px;
+}
+.course-text h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 34px;
+    margin: 15px 0 15px;
+    transition: all 0.40s ease;
+}
+.course-text h3:hover {
+    color: #9835ff;
+}
+.course-text h6 {
+    color: #696969;
+    line-height: 30px;
+    opacity: 0.6;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.rating {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.star {
+    color: #9835ff;
+    margin-right: 2px;
+    font-size: 17px;
+}
+.review p {
+    color: #696969;
+}
+@media (max-width: 768px) {
+            .courses-content {
+                flex-direction: column;
+            }
+
+            .row {
+                width: 70%; /* Make the cards full width on smaller screens */
+            }
+        }
     </style>
 </head>
 <body>
@@ -143,7 +301,176 @@
             </a></li>
         </ul>
     </nav>
-    <!--Start course section-->
+    <!--Start categories section-->
+ <section class="categories" id="categories">
+    <div class="center-text">
+        <h5>Categories</h5>
+        <h2>Popular Categories</h2>
+    </div>
 
+    <div class="categories-content">
+        <div class="box">
+            <img src="Images/welcomia_ss_periodictbl_552027100.jpg">
+            <h3>Sciences</h3>
+            <p>5 courses</p>
+        </div>
+        <div class="box">
+            <img src="Images/phil-homepage-sm.jpg">
+            <h3>Arts</h3>
+            <p>5 courses</p>
+        </div>
+        <div class="box">
+            <img src="Images/png-transparent-general-arab-insurance-federation-gaif-email-business-telephone-world-studios-ict-web-design-service-business-thumbnail.png">
+            <h3>Technology</h3>
+            <p>5 courses</p>
+        </div>
+    </div>
+    <div class="main-btn">
+        <a href="#" class="btn">All categories</a>
+    </div>
+ </section>
+ <!--Start courses section-->
+ <section class="courses" id="courses">
+    <div class="center-text">
+        <h5>COURSES</h5>
+        <h2>Explore Popular Courses</h2>
+    </div>
+    <div class="courses-content">
+        <div class="row">
+            <img src="Images/Mathematics course.png">
+            <div class="course-text">
+                <h5>$15.00</h5>
+                <h3>Complete Mathematics guide</h3>
+                <h6>15 hours 05 minutes</h6>
+                <div class="rating">
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="review">
+                        <p>{15 reviews}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <img src="Images/computer course.png">
+            <div class="course-text">
+                <h5>$20.00</h5>
+                <h3>Introduction to Computer science</h3>
+                <h6>15 hours 05 minutes</h6>
+                <div class="rating">
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="review">
+                        <p>{35 reviews}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <img src="Images/food science course.png">
+            <div class="course-text">
+                <h5>$10.00</h5>
+                <h3>Beginner guide to Food science</h3>
+                <h6>10 hours 05 minutes</h6>
+                <div class="rating">
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="review">
+                        <p>{5 reviews}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <img src="Images/chemistry course.png">
+            <div class="course-text">
+                <h5>$15.00</h5>
+                <h3>Complete Inorganic Chemistry Alevel 2011-2023</h3>
+                <h6>100 hours 35 minutes</h6>
+                <div class="rating">
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="review">
+                        <p>{135 reviews}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <img src="Images/course2.png">
+            <div class="course-text">
+                <h5>$15.00</h5>
+                <h3>Complete Biology Alevel practice 2018-2023</h3>
+                <h6>15 hours 05 minutes</h6>
+                <div class="rating">
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="review">
+                        <p>{15 reviews}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <img src="Images/history course.png">
+            <div class="course-text">
+                <h5>$15.00</h5>
+                <h3>Complete History Alevel practice 2018-2023</h3>
+                <h6>15 hours 05 minutes</h6>
+                <div class="rating">
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="review">
+                        <p>{15 reviews}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-btn">
+        <a href="#" class="btn">Buy now</a>
+    </div>
+ </section>
+ <section class="cta">
+    <div class="center-text">
+        <h5>Trusted by</h5>
+        <h2>50+ Leading Universities and Companies</h2>
+    </div>
+    </div>
+ </section>
 </body>
 </html>
