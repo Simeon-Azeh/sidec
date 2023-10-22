@@ -456,6 +456,14 @@ input[type="text"]:focus {
                 font-size: 12px;
             }
         }
+        .learn-more-link {
+        color: purple;
+        margin-top: -10px;
+        display: inline-block;
+    }
+    .learn-more-link:hover {
+        background-color: none;
+    }
     </style>
 </head>
 <body>
@@ -476,16 +484,20 @@ input[type="text"]:focus {
                 <span class="nav-item">Profile</span>
             </a></li>
             <li><a href="test.html">
-                <i class="fas fa-book-open-reader"></i>
+                <i class="fas fa-book-open"></i>
                 <span class="nav-item">Test</span>
             </a></li>
             <li><a href="tutors.html">
                 <i class="fas fa-chalkboard-user"></i>
                 <span class="nav-item">Tutors</span>
             </a></li>
-            <li><a href="message.html">
-                <i class="fas fa-message"></i>
-                <span class="nav-item">Messages</span>
+            <li><a href="courses.html">
+                <i class="fas fa-book"></i>
+                <span class="nav-item">Courses</span>
+            </a></li>
+            <li><a href="questions.html">
+                <i class="fas fa-file-circle-question"></i>
+                <span class="nav-item">Question bank</span>
             </a></li>
             <li><a href="notifications.html">
                 <i class="fas fa-bell"></i>
@@ -541,7 +553,7 @@ input[type="text"]:focus {
             <div class="notification-panel">
                 <button class="close-button" onclick="closeNotificationPanel()">&times;</button>
                 <h2>Latest Updates</h2>
-                <p>Stay tuned for exciting new features and content on our website!</p>
+                <p>A question bank is now available on a website, check navigation and download or view past questions to all subjects<a href="questions.html" class="learn-more-link">Learn more...</a></p>
             </div>
             
             <script>
