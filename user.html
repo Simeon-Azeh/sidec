@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/03ca4ba95f.js" crossorigin="anonymous"></script>
     <title>sidec</title>
@@ -17,16 +17,18 @@
             border: none;
             text-decoration: none;
             box-sizing: border-box;
-
         }
         body {
             background: #f9feff;
         }
+        .container {
+            display: flex;
+        }
         nav {
-            position: absolute;
+            position: relative;
             top: 0;
             bottom: 0;
-            height: 100%;
+            height: 100vh;
             left: 0;
             background: #fff;
             width: 70px;
@@ -51,8 +53,6 @@
             padding-left: 15px;
             font-size: 18px;
             margin-top: 5px;
-            
-            
         }
         a {
             position: relative;
@@ -63,7 +63,6 @@
             width: 300px;
             padding: 10px;
             font-weight: 600;
-            
         }
         .fas {
             position: relative;
@@ -90,10 +89,186 @@
             position: absolute;
             bottom: 0;
         }
+        /* Main section */
+        .main {
+            position: relative;
+            padding: 20px;
+            width: 100%;
+        }
+        .main-top {
+            display: flex;
+            align-items: center;
+        }
+        .main-top h1 {
+            margin-right: 10px;
+        }
+        .main-top i {
+            position: absolute;
+            right: 0;
+            margin: 10px 30px;
+            color: rgb(11, 109, 109);
+            cursor: pointer;
+        }
+        .main-skills {
+            display: flex;
+            flex-wrap: wrap; /* Make the cards wrap to the next line on smaller screens */
+            margin-top: 20px;
+        }
+        .main-skills .card {
+            width: 23%;
+            margin: 10px;
+            background: #fff;
+            text-align: center;
+            border-radius: 20px;
+            padding: 10px;
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+        }
+        .main-skills .card h3 {
+            margin: 10px;
+            text-transform: capitalize;
+        }
+        .main-skills .card p {
+            font-size: 14px;
+            font-weight: 400;
+        }
+        .main-skills .card button {
+            background: #9835ff;
+            color: #fff;
+            padding: 7px 15px;
+            border-radius: 10px;
+            opacity: 1;
+            margin-top: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .main-skills .card button:hover {
+            opacity: 0.8;
+        }
+        .main-skills .card i {
+            font-size: 22px;
+            padding: 10px;
+        }
+        /* courses */
+        .main-course {
+            margin-top: 20px;
+            text-transform: capitalize;
+        }
+        .course-box {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+        }
+        .course-box ul {
+            list-style: none;
+            display: flex;
+        }
+        .course-box ul li {
+            margin: 10px;
+            color: gray;
+            cursor: pointer;
+        }
+        .course-box ul .active {
+            color: #000;
+            border-bottom: 1px solid #000;
+        }
+        .course-box .course {
+            display: flex;
+            flex-wrap: wrap; /* Make the boxes wrap to the next line on smaller screens */
+        }
+        .box {
+            width: 20%;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            background: rgb(235, 233, 233);
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+        }
+        .box p {
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        .box button {
+            background: #9835ff;
+            border-radius: 10px;
+            color: #fff;
+            opacity: 1;
+            padding: 7px 10px;
+            margin-top: 3rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .box button:hover {
+            opacity: 0.8;
+        }
+        .box i {
+            font-size: 7rem;
+            float: right;
+            margin: -20px 20px 20px 0;
+        }
+        .html {
+            color: rgb(25, 94, 54);
+        }
+        .css {
+            color: rgb(104, 179, 35);
+        }
+        .js {
+            color: rgb(28, 98, 179);
+        }
+        .test-results h1 {
+            margin-top: 30px;
+        }
+        .test-box {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #9835ff;
+            border-radius: 10px;
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+        }
+        .test-box h5 {
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            font-weight: 600;
+        }
+        .test-box button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            border-radius: 10px;
+            color: #9835ff;
+            opacity: 1;
+            padding: 7px 10px;
+            margin-top: 3rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .test-box button:hover {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            /* Media query for smaller screens */
+            .main-skills .card {
+                width: 100%; /* Make the cards full width on smaller screens */
+            }
+            .course-box .course {
+                flex-direction: column; /* Stack the boxes on top of each other on smaller screens */
+            }
+            .box {
+                width: 100%; /* Make the boxes full width on smaller screens */
+            }
+        }
     </style>
 </head>
 <body>
+    <div class="container">
     <nav>
+        <!-- Navigation content -->
         <ul>
             <li>
                 <a href="#"   class="logo">
@@ -107,7 +282,7 @@
             </a></li>
             <li><a href="user.html">
                 <i class="fas fa-user"></i>
-                <span class="nav-item">Profile</span>
+                <span class="nav-item">Dashboard</span>
             </a></li>
             <li><a href="test.html">
                 <i class="fas fa-book-open"></i>
@@ -143,5 +318,76 @@
             </a></li>
         </ul>
     </nav>
+    <section class="main">
+        <div class="main-top">
+            <h1>Skills</h1>
+            <i class="fas fa-user-cog"></i>
+        </div>
+        <div class="main-skills">
+            <div class="card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Web development</h3>
+                <p>Join over 1000 students across Africa with Simeon</p>
+                <button>Get started</button>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-microchip"></i>
+                <h3>Mobile development</h3>
+                <p>Join over 2000 students across Africa with Erdrick</p>
+                <button>Get started</button>
+            </div>
+            <div class="card">
+                <i class="fab fa-squarespace"></i>
+                <h3>Squarespace</h3>
+                <p>Join over 1005 students across Africa with Jcorder</p>
+                <button>Get started</button>
+            </div>
+            <div class="card">
+                <i class="fas fa-palette"></i>
+                <h3>Graphic design</h3>
+                <p>Join over 700 students across Africa with Olaniyi</p>
+                <button>Get started</button>
+            </div>
+        </div>
+        <section class="main-course">
+            <h1>My courses</h1>
+            <div class="course-box">
+                <ul>
+                    <li class="active">In progress</li>
+                    <li>Trending</li>
+                    <li>Explore</li>
+                    <li>Finished</li>
+                </ul>
+                <div class="course">
+                    <div class="box">
+                        <h3>HTML</h3>
+                        <p>80% - progress</p>
+                        <button>Continue</button>
+                        <i class="fab fa-html5 html"></i>
+                    </div>
+                    <div class="box">
+                        <h3>CSS</h3>
+                        <p>50% - progress</p>
+                        <button>Continue</button>
+                        <i class="fab fa-css3-alt css"></i>
+                    </div>
+                    <div class="box">
+                        <h3>JavaScript</h3>
+                        <p>20% - progress</p>
+                        <button>Continue</button>
+                        <i class="fab fa-js-square js"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="test-results">
+            <h1>Recent test results</h1>
+            <div class="test-box">
+                <h5>You have no recent tests</h5>
+                <button class="tst-btn">Take test</button>
+            </div>
+        </section>
+    </section>
+    </div> 
 </body>
 </html>
