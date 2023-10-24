@@ -106,6 +106,18 @@
         }
         .container h1 {
             color: #333;
+            position: relative;
+            margin-top: 10px;
+        }
+        .container h1::before {
+            content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background-color: #9835ff;
+    border-radius: 25px;
         }
         .container .tab {
             position: relative;
@@ -221,8 +233,221 @@
         margin: auto;
         text-align: center;
     }
+    .form.contact {
+        max-width: 90%;
+        margin: 0 auto; /* Center-align the tabs */
+        font-size: 14px; /* Adjust the font size */
+    }
+       .form.contact h1 {
+        text-align: center; /* Center-align the header */
+        font-size: 18px; /* Adjust the font size */
+        margin: auto;
+        text-align: center;
+    }
+    .contact-info {
+        max-width: 70%;
+        font-size: 14px;
+        margin-left: 0 auto;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .contact-info h2 {
+        font-size: 8px;
+    }
+    .contact-item p {
+        font-weight: 400;
+        font-size: 8px;
+    }
     
 }
+.form.contact {
+    background-color: #fff;
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.05);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+/* Contact form styles */
+.form.contact .title {
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+    margin-top: 40px;
+}
+
+.form.contact .title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background-color: #9835ff;
+    border-radius: 25px;
+}
+
+.form.contact .input-field {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+    background-color: transparent;
+}
+
+.form.contact .input-field input[type="text"],
+.form.contact .input-field input[type="email"] {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid transparent;
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+.form.contact .input-field input[type="text"]:focus,
+.form.contact .input-field input[type="email"]:focus {
+    border-bottom-color: #9835ff;
+}
+.form.contact .input-field input[type="text"]:valid,
+.form.contact .input-field input[type="email"]:valid {
+    border-bottom-color: rgb(39, 255, 39) ;
+}
+
+.form.contact .input-field i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    transition: all 0.2s ease;
+}
+
+.form.contact .input-field i.icon {
+    left: 0;
+}
+
+.form.contact .checkbox-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.form.contact .checkbox-content input {
+    margin: 0 8px -2px 4px;
+    accent-color: #9835ff;
+}
+
+.form.contact .button {
+    margin-top: 50px;
+}
+
+.form.contact .button input[type="submit"] {
+    border: none;
+    padding: 10px 10px 10px 10px;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    background-color: #9835ff;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.form.contact .button input[type="submit"]:hover {
+    opacity: 1;
+}
+#message {
+    width: 100%;
+    padding-left: 20px;
+    border: 1px solid #ccc;
+    padding-top: 10px;
+    font-size: 14px;
+    transition: all 0.40s ease;
+}
+#message:hover {
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.05);
+    border: 1px solid #9835ff;
+}
+
+.contact-info {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-info h2 {
+    position: relative;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    text-align: left;
+}
+.contact-info h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background-color: #9835ff;
+    border-radius: 25px;
+}
+.emergency-tag {
+    font-size: 14px;
+    color: #f00;
+    margin-top: 10px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.icon {
+    font-size: 18px;
+    margin-right: 10px;
+    color: #9835ff;
+}
+
+.contact-item p {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+/* ... (Your existing CSS styles) */
+    /* Add a sticky footer */
+.footer {
+    text-align: center;
+    background-color: #333; /* Choose the desired background color */
+    color: #fff; /* Choose the desired text color */
+    padding: 10px 0;
+    clear: both; /* Clear both floats */
+    width: 100%;
+}
+
+
+/* Additional styling as needed */
+
+
+
+/* Additional styling as needed */
+
 
     </style>
 </head>
@@ -355,6 +580,82 @@ You can add your certificates to your LinkedIn profile or resume by uploading a 
 We accept major credit and debit cards, as well as various mobile payment methods, including MTN mobile money via Flutterwave.
             </p></div>
         </div>
+        <div class="form contact">
+            <span class="title">Contact Us</span>
+            <form id="contactForm">
+                <div class="input-field">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <i class="fa-solid fa-user icon"></i>
+                </div>
+                <div class="input-field">
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <i class="fa-solid fa-envelope icon"></i>
+                </div>
+                <div class="input-field">
+                    <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+                    <i class="fa-solid fa-comment-alt-lines icon"></i>
+                </div>
+                <div class="input-field button">
+                    <input type="submit" value="Send Message">
+                </div>
+            </form>
+        </div>
+        <div class="contact-info">
+            <h2>Speak with Our Team</h2>
+            <p class="emergency-tag">In Cases of Emergency</p>
+            
+            <div class="contact-item">
+                <i class="fa-solid fa-phone icon"></i>
+                <p>+250 798654693 | +237 652812028</p>
+            </div>
+        
+            <div class="contact-item">
+                <i class="fa-solid fa-envelope icon"></i>
+                <p>sidecteam@gmail.com</p>
+            </div>
+        
+            <div class="contact-item">
+                <i class="fa-solid fa-map-marker icon"></i>
+                <p>Bumbogo, Kigali, Rwanda | Bambili, Cameroon</p>
+            </div>
+        </div>
+        <div class="footer">&copy sidec cameroon 2023</div>
     </div>
+   
+    <script>
+        // JavaScript for handling the form submission
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent the default form submission behavior
+
+            // You can add your form submission logic here
+            // For example, you can collect form data and send it to a server using AJAX
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Example: Sending form data to a server using fetch
+            fetch('your-server-endpoint', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name,
+                    email,
+                    message,
+                }),
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Handle a successful form submission (e.g., display a success message)
+                } else {
+                    // Handle errors if the form submission fails
+                }
+            })
+            .catch(error => {
+                // Handle network errors
+            });
+        });
+    </script>
 </body>
 </html>
