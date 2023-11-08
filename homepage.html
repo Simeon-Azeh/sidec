@@ -435,10 +435,26 @@ input[type="text"]:focus {
 /* Mobile Styles */
 @media (max-width: 768px) {
             /* ... Existing mobile styles ... */
-
+        .nav-item {
+            margin-right: 50px ;
+        }
             /* Adjustments for smaller screens */
             .sections-container {
                 flex-direction: column-reverse; /* Reverse order for smaller screens */
+                margin: 10px auto;
+            }
+            .tutor-container {
+             margin: 15px auto;
+             margin-left: 100px;
+             justify-content: center;
+             align-items: center;
+             width: 65%;
+            }
+       .tutor-container .take-test-link {
+                box-sizing: border-box;
+                margin: 10px auto;
+                width: 100%;
+                padding: 5px 5px 5px 5px;
             }
 
             .notification-panel {
@@ -451,20 +467,61 @@ input[type="text"]:focus {
             }
 
             .notification-panel h2 {
-                font-size: 14px; /* Smaller font size for mobile */
+                font-size: 12px; /* Smaller font size for mobile */
             }
             .notification-panel p {
-                font-size: 12px;
+                font-size: 10px;
+            }
+            .pro-button  {
+                width: 30%;
+                font-size: 10px;
+                padding: 5px 5px;
+                margin-bottom: 40px;
+            }
+            .logout {
+                margin-top: 0;
             }
         }
         .learn-more-link {
         color: purple;
-        margin-top: -10px;
+        margin-top: -15px;
         display: inline-block;
+        font-size: 12px;
     }
     .learn-more-link:hover {
         background-color: none;
     }
+    .pro-button {
+    background-color: #9835FF; /* Purple background color */
+    width: 60%;
+    height: 25px;
+    margin-top: 10px;
+    margin-left: 15px;
+    color: #fff; /* Text color */
+    padding: 10px 10px; /* Adjust padding to your preference */
+    border-radius: 10px;
+    text-decoration: none; /* Remove underlines from the link */
+    font-weight: 600;
+    transition: all 0.40s ease;
+}
+
+.pro-button:hover {
+    background-color: #333; /* Change color on hover */
+}
+/* Add this CSS to adjust the "Pro" button position on smaller screens */
+@media (max-width: 768px) {
+    .nav-item {
+        margin-right: 50px;
+    }
+    
+    .pro-button {
+        width: 60%;
+        margin-top: -3px; /* Adjust the top margin to your preference */
+        margin-left: 15px;
+    }
+}
+
+
     </style>
 </head>
 <body>
@@ -512,6 +569,12 @@ input[type="text"]:focus {
                 <i class="fas fa-question-circle"></i>
                 <span class="nav-item">Help</span>
             </a></li>
+            <li>
+                <a href="payment.html" class="pro-button" onclick="confirmNavigation()">
+                    Pro
+                </a>
+            </li>
+            
             <li><a href="Login.html" class="logout">
                 <i class="fas fa-sign-out-alt"></i>
                 <span class="nav-item">Log out</span>
@@ -687,6 +750,20 @@ input[type="text"]:focus {
                     scrollToTopButton.style.display = "none";
                 }
             }
-        </script>           
+        </script>   
+
+       
+<script>
+    // Function to show a confirmation dialog
+    function confirmNavigation() {
+        const confirmation = window.confirm("You are about to navigate out of our site, there are no nav bars, to return to the site, you would have to go back via browser. Are you sure you want to continue?");
+        
+        if (confirmation) {
+            // If the user confirms, navigate to the desired URL
+            window.location.href = "payment.html"; 
+        }
+    }
+</script>
+
 </body>
 </html>

@@ -23,7 +23,7 @@
             background: #f9feff;
         }
         nav {
-            position: absolute;
+            position: fixed;
             top: 0;
             bottom: 0;
             height: 100%;
@@ -33,6 +33,7 @@
             overflow: hidden;
             transition: width 0.2s linear;
             box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
         }
         .logo {
             text-align: center;
@@ -51,8 +52,8 @@
             padding-left: 15px;
             font-size: 18px;
             margin-top: 5px;
-            
-            
+
+
         }
         a {
             position: relative;
@@ -63,7 +64,7 @@
             width: 300px;
             padding: 10px;
             font-weight: 600;
-            
+
         }
         .fas {
             position: relative;
@@ -89,6 +90,187 @@
         .logout {
             position: absolute;
             bottom: 0;
+        }
+        .categories-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 80px;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.box img {
+    width: 50px; /* Adjust the size as needed */
+    height: 50px; /* Adjust the size as needed */
+    border-radius: 50%; /* Makes the image rounded */
+    border: 1px solid #9835ff;
+}
+.center-text {
+    text-align: center;
+    margin-top: 20px;
+}
+.center-text h5 {
+    color: #9835ff;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.center-text h2 {
+    font-size: var(--h2-font);
+    line-height: 1.2;
+}
+.box {
+    padding: 25px 20px;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    box-shadow: -11.729px -11.729px 32px rgba(255, 255, 255, /15%);
+    transition: all 0.40s ease;
+}
+/*I love this hover effect*/
+.box:hover {
+    transform: translateY(-15px);
+}
+.box h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.3;
+    transition: all 0.40s ease;
+}
+.box h3:hover {
+    color: #9835ff;
+}
+.box p {
+    font-size: 12px;
+    font-weight: 600;
+}
+.main-btn {
+    text-align: center;
+    margin-top: 5rem;
+    align-items: center;
+    justify-content: center;
+}
+.btn {
+    display: inline-block;
+    margin-top: -80px;
+    padding: 16px 30px;
+    background: #9835ff;
+    color: #fff;
+    border-radius: 10px;
+    transition: all .40s ease;
+}
+.btn:hover{
+    transform: scale(0.9) translateY(-5px);
+    background-color: #9835ff;
+}
+
+/* Additional styling for other elements as needed */
+.courses-content {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 0.1rem;
+   align-items: center;
+   margin-top: 2rem;
+   margin-left: 20px;
+   cursor: pointer;
+   border-radius: 10px;
+}
+.row {
+    width: calc(28.333% - 1rem);
+    background: #fff;
+    padding:0px 0px 10px 0px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
+    transition: all .40s ease;
+    margin-left: 20px;
+    margin-bottom: 1rem;
+}
+.row:hover {
+    transform: translateY(-15px);
+}
+.row img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
+}
+.course-text {
+    padding: 35px 20px;
+}
+.course-text h5 {
+    color: #9835ff;
+    font-size: 18px;
+}
+.course-text h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 34px;
+    margin: 15px 0 15px;
+    transition: all 0.40s ease;
+}
+.course-text h3:hover {
+    color: #9835ff;
+}
+.course-text h6 {
+    color: #696969;
+    line-height: 30px;
+    opacity: 0.6;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.rating {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.star {
+    color: #9835ff;
+    margin-right: 2px;
+    font-size: 12px;
+  
+}
+.review a {
+    background-color: #fff;
+    color: #9835ff;
+    border-radius: 10px;
+    width: 50%;
+    text-align: center;
+    padding-right: 80px;
+    padding-left: 40px;
+    transition: all 0.3s ease;
+    border: 1px solid #9835ff;
+}
+.review .book {
+    margin-bottom: 10px;
+    background-color: #9835ff;
+    color: #fff;
+}
+.review p {
+    display: flex;
+    position: absolute;
+    margin-top: -30px;
+    margin-left: -130px;
+    color: #696969;
+    text-align: left;
+}
+.review a:hover {
+    transform: scale(0.9) translateY(-5px);
+}
+@media (max-width: 768px) {
+            .courses-content {
+                flex-direction: column;
+            }
+
+            .row {
+                width: 70%; /* Make the cards full width on smaller screens */
+            }
         }
     </style>
 </head>
@@ -143,5 +325,253 @@
             </a></li>
         </ul>
     </nav>
+    <!--Start categories section-->
+ <section class="categories" id="categories">
+    <div class="center-text">
+        <h5>Categories</h5>
+        <h2>Popular Categories</h2>
+    </div>
+
+    <div class="categories-content">
+        <div class="box">
+            <img src="Images/sciencess.png">
+            <h3>Science tutors</h3>
+            <p>35 tutors</p>
+        </div>
+        <div class="box">
+            <img src="Images/artsss.png">
+            <h3>Arts tutors</h3>
+            <p>21 tutors</p>
+        </div>
+        <div class="box">
+            <img src="Images/tecjjjj.png">
+            <h3>Technology tutors</h3>
+            <p>5 tutors</p>
+        </div>
+    </div>
+    <div class="main-btn">
+        <a href="#" class="btn">All categories</a>
+    </div>
+ </section>
+ <!--Start courses section-->
+ <section class="courses" id="courses">
+    <div class="center-text">
+        <h5>Tutors</h5>
+        <h2>Recommended Tutors</h2>
+    </div>
+    <div class="courses-content">
+        <div class="row">
+            <img src="Images/1.png">
+            <div class="course-text">
+                <h5>Mathematics</h5>
+                <h3>John Fred</h3>
+                <h6>5 years experience | $10 per hour</h6>
+                <div class="rating">
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="review">
+                        <a href="#" class="book">Book</a>
+                        <a href="#">Bio</a>
+                        <p>{34 reviews}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <img src="Images/WhatsApp Image 2023-06-27 at 20.45.54.jpg">
+            <div class="course-text">
+                <h5>Computer science</h5>
+                <h3>Simeon Azeh</h3>
+                <h6>2 years experience | $4 per hour</h6>
+                <div class="rating">
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="review">
+                        <a href="#" class="book">Book</a>
+                        <a href="#">Bio</a>
+                        <p>{23 reviews}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <img src="Images/3.png">
+            <div class="course-text">
+                <h5>Backend developer</h5>
+                <h3>Junior Foryoung</h3>
+                <h6>3 years experience | $15 per hour</h6>
+                <div class="rating">
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="review">
+                        <a href="#" class="book">Book</a>
+                        <a href="#">Bio</a>
+                        <p>{43 reviews}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <img src="Images/4.png">
+            <div class="course-text">
+                <h5>Further maths</h5>
+                <h3>Swanika John</h3>
+                <h6>4 years experience | $12 per hour</h6>
+                <div class="rating">
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="review">
+                        <a href="#" class="book">Book</a>
+                        <a href="#">Bio</a>
+                        <p>{135 reviews}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <img src="Images/5.png">
+            <div class="course-text">
+                <h5>History</h5>
+                <h3>Eric Tita</h3>
+                <h6>7 years experience | $12 per hour</h6>
+                <div class="rating">
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="review">
+                        <a href="#" class="book">Book</a>
+                        <a href="#">Bio</a>
+                        <p>{15 reviews}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <img src="Images/Biologyyyy.png">
+            <div class="course-text">
+                <h5>Biology</h5>
+                <h3>Joana Akumbu</h3>
+                <h6>2 years experience | $10 per hour </h6>
+                <div class="rating">
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="review">
+                        <a href="#" class="book">Book</a>
+                        <a href="#">Bio</a>
+                        <p>{15 reviews}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <img src="Images/fooooo.png">
+            <div class="course-text">
+                <h5>Food science</h5>
+                <h3>Kimberly Paula</h3>
+                <h6>2 years experience | $10 per hour </h6>
+                <div class="rating">
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="review">
+                        <a href="#" class="book">Book</a>
+                        <a href="#">Bio</a>
+                        <p>{15 reviews}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <img src="Images/geoooo.png">
+            <div class="course-text">
+                <h5>Geography</h5>
+                <h3>Favour Jones</h3>
+                <h6>3 years experience | $10 per hour </h6>
+                <div class="rating">
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="review">
+                        <a href="#" class="book">Book</a>
+                        <a href="#">Bio</a>
+                        <p>{15 reviews}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <img src="Images/Chemm.png">
+            <div class="course-text">
+                <h5>Chemistry</h5>
+                <h3>Dango Paul</h3>
+                <h6>35 years experience | $30 per hour </h6>
+                <div class="rating">
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="review">
+                        <a href="#" class="book">Book</a>
+                        <a href="#">Bio</a>
+                        <p>{234 reviews}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-btn">
+        <a href="#" class="btn">See more</a>
+    </div>
+ </section>
+ <section class="cta">
+    <div class="center-text">
+        <h5>250+ tutors use this site</h5>
+    </div>
+    </div>
+  </section>
 </body>
 </html>
