@@ -27,7 +27,7 @@
             align-items: center;
         }
         nav {
-            position: absolute;
+            position: fixed;
             top: 0;
             bottom: 0;
             height: 100%;
@@ -99,9 +99,11 @@
             margin-top: 60px;
             text-align: center;
         }
-        .animated-text span {
+        .animated-text h1 {
             position: relative;
+            font-size: 34px;
         }
+        
         .animated-text span::before {
             content: "Ready";
             color: #9835ff;
@@ -117,36 +119,8 @@
             right: -8px;
             animation: cursor .8s infinite, typing 20s steps(14) infinite;
         }
-        @keyframes cursor {
-            to {
-                border-left: 2px solid #f9feff;
-            }
-        }
-        @keyframes words {
-            0%, 20% {
-                content: "Ready";
-            }
-            21%, 40% {
-                content: "testfied";
-            }
-            41%, 60% {
-                content: "passing GCE";
-            }
-            61%, 80% {
-                content: "Sidec";
-            }
-            81%, 100% {
-                content: "Ready to succeed";
-            }
-        }
-        @keyframes typing {
-            10%,15%,30%,35%,50%,55%,70%,75%,90%,95% {
-                width: 0;
-            }
-            5%,20%,25%,40%,45%,60%,65%,80%,85%{
-                width: calc(100% + 8px);
-            }
-        }
+      
+        
         .button-container {
             display: flex;
             flex-direction: column;
@@ -197,13 +171,37 @@
             align-items: center;
         }
         .img-con img {
-            width: 300px;
-            height: 300px;
-            margin-top: -40px;
+            width: 400px;
+            height: 400px;
+            margin-top: -80px;
         }
         .alert-1 {
             font-size: 18px;
         }
+        .button {
+  position: relative;
+  padding: 10px 22px;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background-color: #7d2ae8;
+  transition: all 0.2s ease;
+}
+.button:hover {
+  transform: scale(0.96);
+}
+.button-2 {
+    position: relative;
+  padding: 10px 22px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  border: 1px solid #9835ff;
+  color: #9835ff;
+  cursor: pointer;
+  background-color: #fff;
+  transition: all 0.2s ease; 
+}
     </style>
 </head>
 <body>
@@ -258,23 +256,14 @@
         </ul>
     </nav>
     <div class="animated-text">
-        I am <span></span>
+       <h1>Your success <br>starts here! </h1> 
     </div>
     <div class="img-con">
         <img src="Images/20231020_073607.png" alt="sidec_lady">
     </div>
-    <p class="alert-1">For better user experience, we recommend you using larger screens</p>
     <h5>You will get your result in 30minuites!</h5>
-    <div class="button-container">
-        <div class="button">
-            <a href="testmain.html" class="test-button">
-                Test now
-            </a>
-        </div>
-        <div class="button">
-            <a href="download.html" class="download-button">
-                Download questions
-            </a>
+            <button class="button" onclick="window.location.href='testmain.html'">Test now</button>
+            <button class="button-2" onclick="window.location.href='questions.html'">Download Questions</button>
         </div>
     </div>
 </body>

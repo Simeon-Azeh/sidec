@@ -21,7 +21,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #E6E6FA;
+            background-color: #f9feff;
         }
         .container {
             position: relative;
@@ -177,7 +177,7 @@
         <div class="forms">
             <div class="form login">
                 <span class="title">Login</span>
-                <form action="#">
+                <form action="homepage.html">
                     <div class="input-field">
                         <input type="email" placeholder="Enter your email" required>
                         <i class="fa-solid fa-envelope icon"></i>
@@ -196,7 +196,7 @@
                         <a href="#" class="text">Forgot password?</a>
                     </div>
                     <div class="input-field button">
-                        <input type="button" value="Login">
+                        <input type="submit" oneclick="window.location.href='homepage.html'" value="Login">
                     </div>
                 </form>
                 <div class="login-signup">
@@ -238,7 +238,9 @@
                         </div>
                     </div>
                     <div class="input-field button">
-                        <input type="button" value="Sign up">
+                        <a href="homepage.html">
+                        <input type="button" oneclick="window.location.href='homepage.html'" value="Sign up">
+                        </a>
                     </div>
                 </form>
                 <div class="login-signup">
