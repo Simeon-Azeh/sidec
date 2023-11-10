@@ -8,7 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/03ca4ba95f.js" crossorigin="anonymous"></script>
-    <title>Login</title>
+    <title>login</title>
+    <link rel="icon" href="Images/Asset 6.png" type="image/png">
     <style>
         * {
             margin: 0;
@@ -169,6 +170,26 @@
             margin-top: 25px;
             text-align: center;
         }
+        select {
+  width: 100%;
+  padding: 10px 35px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+  background-position: right 10px center; /* Adjust icon position */
+  cursor: pointer;
+}
+
+/* Optional: Style the icon */
+.fa-school {
+  position: absolute;
+  margin-top: -5px;
+  top: 60%;
+  left: 5px; /* Adjust as needed */
+  transform: translateY(-50%);
+  color: #ccc; /* Adjust icon color */
+}
            
     </style>
 </head>
@@ -218,9 +239,17 @@
                         <i class="fa-solid fa-envelope icon"></i>
                     </div>
                     <div class="input-field">
-                        <input type="date" placeholder="Date of birth" required>
-                        <i class="fa-solid fa-calendar icon"></i>
-                    </div>
+                        <i class="fa-solid fa-school"></i>
+                        <select name="education-level" id="education-level" required>
+                          <option value="" disabled selected>Select your level of education</option>
+                          <option value="Form 5">Form 5</option>
+                          <option value="Lowersixth">Lowersixth</option>
+                          <option value="Uppersixth">Uppersixth</option>
+                          <option value="University">University</option>
+                          <option value="No formal education">No formal education</option>
+                        </select>
+                      </div>
+                      
                     <div class="input-field">
                         <input type="password" class="password" placeholder="Enter password" required>
                         <i class="fa-solid fa-lock icon"></i> 
