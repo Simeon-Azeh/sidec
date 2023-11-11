@@ -7,7 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/03ca4ba95f.js" crossorigin="anonymous"></script>
-    <title>question bank</title>
+    <title>Schorlaships</title>
     <link rel="icon" href="Images/Asset 6.png" type="image/png">
     <style>
         * {
@@ -23,6 +23,7 @@
         body {
             background: #f9feff;
         }
+
         nav {
             position: fixed;
             top: 0;
@@ -91,6 +92,7 @@
             position: absolute;
             bottom: 0;
         }
+        
        
         .q-test h2 {
             text-align: center;
@@ -104,7 +106,7 @@
         }
         .q-test p {
             text-align: center;
-            margin-left: 300px;
+            margin-left: 400px;
             text-align: justify;
             margin-top: 10px;
             font-size: 18px;
@@ -125,6 +127,7 @@
     .box {
         margin: 10px 10px; /* This will center the .box horizontally */
         position: relative;
+        margin-bottom: 80px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -278,10 +281,11 @@
         align-items: center;
         margin-top: -100px;
         margin-left: 60px;
-        margin-bottom: 30px;
+        margin-bottom: 60px;
     }
     .box {
         margin-top: 10px;
+        margin-bottom: 120px;
         position: relative;
         display: flex;
         align-items: center;
@@ -310,10 +314,11 @@
                 height: 40px;
             }
             .box:nth-child(2) {
-                margin-top: -10px;
+                margin-top: -40ppx;
                 margin-bottom: 80px;
             }
 }
+
 
 
     </style>
@@ -370,35 +375,40 @@
         </ul>
     </nav>
 <div class="q-test">
-    <h2>Welcome to Sidec Q/A bank!</h2>
-    <p> Whether you're a student preparing for exams or someone seeking valuable insights,<br>you're in the right place. Download, learn, and achieve your goals. Happy learning!"</p>
+    <h2>Other exams & Schorlaships</h2>
+    <p>  Find Questions to some exams below, also we have <br>links to Schorlaships for UG and GD programs</p>
 </div>
 <div class="button2-container">
 <div class="box">
-    <div class="dropdown">Questions
+    <div class="dropdown">Popular exams
         <span class="left-icon"></span>
         <span class="right-icon"></span>
         <div class="items">
-            <a href="olevels.html" style="--i:1;"><span></span>O level</a>
-            <a href="alevels.html" style="--i:2;"><span></span>A level</a>
-            <a href="hnd.html" style="--i:3;"><span></span>HND</a>
-            <a href="otherexams.html" style="--i:4;"><span></span>Schorlaships</a>
+            <a href="#" style="--i:1;"><span></span>Jamb</a>
+            <a href="#" style="--i:2;"><span></span>Waec</a>
+            <a href="#" style="--i:3;"><span></span>Neco</a>
+            <a href="#" style="--i:4;"><span></span>Other GCE</a>
+            <a href="#" style="--i:5;"><span></span>Cambridge</a>
         </div>
     </div>
 </div>
 
 <div class="box">
-    <div class="dropdown solutions">Solutions
+    <div class="dropdown solutions">Schorlaships
         <span class="left-icon"></span>
         <span class="right-icon"></span>
         <div class="items">
-            <a href="olevelsol.html" style="--i:1;"><span></span>O level</a>
-            <a href="alevelsol.html" style="--i:2;"><span></span>A level</a>
-            <a href="hndsol.html" style="--i:3;"><span></span>HND</a>
-            <a href="otherexamsol.html" style="--i:4;"><span></span>Others</a>
+            <a href="https://start.alueducation.com/" target="_blank" onclick="return showWarning();"  style="--i:8;"><span></span>African Leadership U</a>
+            <a href="https://urega.org/" target="_blank" onclick="showWarning(); "  style="--i:8;"><span></span>Urega for High school</a>
+            <a href="https://www.ashesi.edu.gh/" target="_blank" onclick="showWarning(); "  style="--i:9;"><span></span>Ashesi Ghana</a>
+            <a href="https://connect.usiu.ac.ke/" target="_blank" onclick="showWarning();"  style="--i:10;"><span></span>USIUU</a>
+            <a href="https://www.aub.edu.lb/" target="_blank" onclick="showWarning();"  style="--i:12;"><span></span>American University of Beirut</a>
+            <a href="https://ur.ac.rw/" target="_blank" onclick="showWarning(); "  style="--i:13;"><span></span>University of Rwanda</a>
+            <a href="https://www.africa.engineering.cmu.edu/" target="_blank" onclick="showWarning();"  style="--i:14;"><span></span>Carnegie Mellon Rwanda</a>
         </div>
     </div>
 </div>
+
 </div>
 
 <script>
@@ -410,6 +420,15 @@ dropdowns.forEach((dropdown) => {
     });
 });
 
+</script>
+<script>
+    function showWarning() {
+        // Use a confirmation dialog to get user's decision
+        const proceed = confirm("You are leaving our site. Are you sure you want to proceed?");
+        
+        // Return true if the user chooses to proceed, false otherwise
+        return proceed;
+    }
 </script>
 </body>
 </html>
