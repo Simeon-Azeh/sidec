@@ -91,13 +91,36 @@
             position: absolute;
             bottom: 0;
         }
-       
+
+        #scrollToTopButton {
+    display: none; /* Initially hide the button */
+    position: fixed;
+    bottom: 20px;
+    right: 30px; /* Adjust the right position */
+    background-color: #9835FF; /* Button background color */
+    color: #fff; /* Text color */
+    border: none;
+    border-radius: 10px; /* Make it a circle */
+    cursor: pointer;
+    padding: 10px;
+    z-index: 99; /* Ensure it's above other content */
+    transition: 0.5s ease ;
+    font-weight: 600;
+}
+        #scrollToTopButton i {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#scrollToTopButton:hover {
+    background-color: #333; /* Hover color */
+}
         .q-test h2 {
             text-align: center;
             font-size: 34px;
             margin-top: 40px;
             margin-bottom: 20px;
-            margin-left: 100px;
+            margin-left: 85px;
             margin-right: 40px;
             place-self: center;
             color: #696969;
@@ -316,6 +339,256 @@
 }
 
 
+/* Add media query for smaller screens */
+@media (max-width: 768px) {
+    .container .tab {
+        max-width: 80%;
+        margin: 0 auto; /* Center-align the tabs */
+        font-size: 12px; /* Adjust the font size */
+    }
+        .container h1 {
+        text-align: center; /* Center-align the header */
+        font-size: 18px; /* Adjust the font size */
+        margin: 5px auto;
+        text-align: center;
+    }
+    .form.contact {
+        max-width: 90%;
+        margin: 0 auto; /* Center-align the tabs */
+        font-size: 14px; /* Adjust the font size */
+    }
+       .form.contact h1 {
+        text-align: center; /* Center-align the header */
+        font-size: 18px; /* Adjust the font size */
+        margin: auto;
+        text-align: center;
+    }
+    .contact-info {
+        max-width: 60%;
+        font-size: 14px;
+       margin-left: 85px;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .contact-info h2 {
+        font-size: 8px;
+    }
+    .contact-item p {
+        font-weight: 400;
+        font-size: 6px;
+    }
+    
+}
+.form.contact {
+    background-color: #fff;
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.05);
+    padding-left: 20px;
+    width: 40%;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    margin-left: 410px;
+    margin-top: 170px;
+    margin-bottom: 40px;
+}
+/* Contact form styles */
+.form.contact .title {
+    position: relative;
+    font-size: 27px;
+    color: #696969;
+    font-weight: 600;
+    margin-top: 40px;
+}
+
+.form.contact .title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    color: #696969;
+    background-color: #9835ff;
+    border-radius: 25px;
+}
+
+.form.contact .input-field {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+    background-color: transparent;
+}
+
+.form.contact .input-field input[type="text"],
+.form.contact .input-field input[type="email"] {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid transparent;
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+.form.contact .input-field input[type="text"]:focus,
+.form.contact .input-field input[type="email"]:focus {
+    border-bottom-color: #9835ff;
+}
+.form.contact .input-field input[type="text"]:valid,
+.form.contact .input-field input[type="email"]:valid {
+    border-bottom-color: rgb(39, 255, 39) ;
+}
+
+.form.contact .input-field i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    transition: all 0.2s ease;
+}
+
+.form.contact .input-field i.icon {
+    left: 0;
+}
+
+.form.contact .checkbox-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.form.contact .checkbox-content input {
+    margin: 0 8px -2px 4px;
+    accent-color: #9835ff;
+}
+
+.form.contact .button {
+    margin-top: 50px;
+}
+
+.form.contact .button input[type="submit"] {
+    border: none;
+    padding: 10px 10px 10px 10px;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    background-color: #9835ff;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.form.contact .button input[type="submit"]:hover {
+    opacity: 1;
+}
+.input-field button {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #9835ff; /* Choose your desired background color */
+    color: #fff; /* Choose your desired text color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.input-field button i {
+    margin-right: 8px; /* Adjust the margin as needed */
+}
+
+.input-field button:hover {
+    background-color: #7d2bce; /* Hover background color */
+}
+
+.input-field button:active {
+    background-color: #5f1f99; /* Active background color */
+}
+#year {
+    width: 100%;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    
+}
+
+.but-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -40px;
+}
+.but-con .button-2 input {
+    margin-left: -60px;
+    background: transparent;
+    border: 1px solid #9835ff;
+    color: #9835ff;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.but-con .button-2 input:hover {
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .container .tab {
+        max-width: 35%;
+        margin: 0 auto; /* Center-align the tabs */
+        font-size: 12px; /* Adjust the font size */
+    }
+        .container h1 {
+        text-align: center; /* Center-align the header */
+        font-size: 18px; /* Adjust the font size */
+        margin: 5px auto;
+        text-align: center;
+    }
+    .form.contact {
+        width: 60%;
+        margin: 0 auto; /* Center-align the tabs */
+        font-size: 14px; /* Adjust the font size */
+        margin-left: 125px;
+        margin-bottom: 40px;
+    }
+       .form.contact h1 {
+        text-align: center; /* Center-align the header */
+        font-size: 14px; /* Adjust the font size */
+        margin: auto;
+        text-align: center;
+    }
+    .but-con .input-field .button input {
+        padding: 8px 10px;
+    }
+    .but-con {
+        display: flex;
+        flex-direction: column;
+    }
+    .but-con .button-2 input {
+        margin-left: 0;
+        margin-top: -80px;
+    }
+}
+
+
+
+
+
+
     </style>
 </head>
 <body>
@@ -393,13 +666,78 @@
         <span class="right-icon"></span>
         <div class="items">
             <a href="olevelsol.html" style="--i:1;"><span></span>O level</a>
-            <a href="alevelsol.html" style="--i:2;"><span></span>A level</a>
+            <a href="solutionsal.html" style="--i:2;"><span></span>A level</a>
             <a href="hndsol.html" style="--i:3;"><span></span>HND</a>
             <a href="otherexamsol.html" style="--i:4;"><span></span>Others</a>
         </div>
     </div>
 </div>
 </div>
+
+<div class="form contact">
+    <span class="title">Didn't find question or solution?</span>
+    <form id="contactForm">
+        <div class="input-field">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <i class="fa-solid fa-user icon"></i>
+        </div>
+        <div class="input-field">
+            <input type="email" id="email" placeholder="Your Email" required>
+            <i class="fa-solid fa-envelope icon"></i>
+        </div>
+
+        <div class="input-field">
+            <input type="text" id="country" placeholder="Your country" required>
+            <i class="fa-solid fa-earth-americas"></i>
+        </div>
+        <div class="input-field">
+            <input type="text" id="exam" placeholder="Type of exam, subject(s) e.g Neco, Chemistry" required>
+            <i class="fa-solid fa-book"></i>
+        </div>
+        <div class="input-field">
+            <input type="number" id="year" placeholder="Enter the year" min="2003" max="2024" required>
+        </div>
+        
+        <!-- Replace the file input with a button -->
+        <div class="but-con">
+            <div class="input-field button">
+                <input type="submit" value="Request Question">
+            </div>
+            <div class="input-field button-2">
+                <input type="submit" class="con0" value="Request Solution">
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<button id="scrollToTopButton" onclick="scrollToTop()">
+    <i class="fa-solid fa-angle-up"></i>
+</button>
+
+<script>
+    // Function to scroll to the top of the page
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Add smooth scrolling behavior
+        });
+    }
+
+    // Show the scroll-to-top button when the user scrolls down
+    window.onscroll = function () {
+        scrollFunction();
+    };
+
+    function scrollFunction() {
+        var scrollToTopButton = document.getElementById("scrollToTopButton");
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollToTopButton.style.display = "block";
+        } else {
+            scrollToTopButton.style.display = "none";
+        }
+    }
+</script>  
 
 <script>
     const dropdowns = document.querySelectorAll('.dropdown');

@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/03ca4ba95f.js" crossorigin="anonymous"></script>
+    <title>sidec alevels</title>
+    <link rel="icon" href="Images/Asset 6.png" type="image/png">
+    <style>
+        * {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            box-sizing: border-box;
+
+        }
+        body {
+            background: #f9feff;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            left: 0;
+            background: #fff;
+            width: 70px;
+            overflow: hidden;
+            transition: width 0.2s linear;
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            text-align: center;
+            display: flex;
+            transition: all 0.5s ease;
+            margin: 10px 0 0 0 10px;
+        }
+        .logo img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-left: 15px;
+        }
+        .logo span {
+            font-weight: bold;
+            padding-left: 15px;
+            font-size: 18px;
+            margin-top: 5px;
+            
+            
+        }
+        a {
+            position: relative;
+            color: rgba(85, 83, 83);
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            width: 300px;
+            padding: 10px;
+            font-weight: 600;
+            
+        }
+        .fas {
+            position: relative;
+            width: 60px;
+            height: 35px;
+            top: 14px;
+            font-size: 20px;
+            text-align: center;
+        }
+        .nav-item {
+            position: relative;
+            top: 0;
+            margin-left: 10px;
+            margin-top: 15px;
+        }
+        a:hover {
+            background: #f9feff;
+        }
+        nav:hover {
+            width: 280px;
+            transition: all 0.5s ease;
+        }
+        .logout {
+            position: absolute;
+            bottom: 0;
+        }
+        #scrollToTopButton {
+    display: none; /* Initially hide the button */
+    position: fixed;
+    bottom: 20px;
+    right: 30px; /* Adjust the right position */
+    background-color: #9835FF; /* Button background color */
+    color: #fff; /* Text color */
+    border: none;
+    border-radius: 10px; /* Make it a circle */
+    cursor: pointer;
+    padding: 10px;
+    z-index: 99; /* Ensure it's above other content */
+    transition: 0.5s ease ;
+    font-weight: 600;
+}
+        #scrollToTopButton i {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#scrollToTopButton:hover {
+    background-color: #333; /* Hover color */
+}
+        
+       
+        .q-test h2 {
+            text-align: center;
+            font-size: 34px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            margin-left: 100px;
+            margin-right: 40px;
+            place-self: center;
+            color: #696969;
+        }
+        .q-test p {
+            text-align: center;
+            margin-left: 570px;
+            text-align: justify;
+            margin-top: 10px;
+            font-size: 18px;
+            color: #9835ff;
+            font-weight: bold;
+        }
+    @media (max-width: 768px) {
+        .q-test h2 {
+            font-size: 20px;
+            margin-left: 60px;
+        }
+        .q-test p {
+            font-size: 12px;
+            margin-left: 170px;
+            margin-right: 40px;
+        }
+    }
+  
+.sec-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #9835ff;
+    color: #fff;
+    width: 80%;
+    height: 60px;
+    margin-left: 150px;
+    border-radius: 5px;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+.sec-1 .text-container h2 {
+    text-align: center;
+    margin-left: 10px;
+}
+.sec-2-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px auto; /* Center the container */
+    max-width: 700px; /* Adjust the maximum width as needed */
+}
+
+.sec-2-container .sec-2 h4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.but-22 {
+    padding: 10px 25px;
+    margin-left: 20px;
+    background-color: #9835ff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+}
+.view {
+    background-color: transparent;
+    border: 1px solid #9835ff;
+    color: #9835ff;
+}
+
+
+.but-22:hover,
+.view:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.sec-2 h4 {
+    font-size: 18px;
+    color: #696969;
+    margin-left: -40px;
+    margin-right: 80px;
+}
+.sec-2 .but-22 i {
+    margin-left: 5px;
+}
+
+@media (max-width: 768px) {
+    .sec-1 {
+        width: 60%;
+        height: 40px;
+        margin-left: 120px;
+       
+    }
+    .sec-1 .text-container h2 {
+        font-size: 14px;
+    }
+    .sec-2 h2 {
+        font-size: 14px;
+    }
+    .sec-2-container {
+        justify-content: center;
+        align-items: center;
+    }
+    .sec-2-container .sec-2 h4 {
+        text-align: center;
+        margin: 20px auto;
+        font-size: 14px;
+    }
+    .sec-2-container .sec-2 .but-22 {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="#"   class="logo">
+                    <img src="Images/Asset 6.png" alt="sidec">
+                    <span class="nav-item">Sidec blogspace</span>
+                </a>
+            </li>
+            <li><a href="homepage.html">
+                <i class="fas fa-home"></i>
+                <span class="nav-item">Home</span>
+            </a></li>
+            <li><a href="user.html">
+                <i class="fas fa-user"></i>
+                <span class="nav-item">Dashboard</span>
+            </a></li>
+            <li><a href="test.html">
+                <i class="fas fa-book-open"></i>
+                <span class="nav-item">Test</span>
+            </a></li>
+            <li><a href="tutors.html">
+                <i class="fas fa-chalkboard-user"></i>
+                <span class="nav-item">Tutors</span>
+            </a></li>
+            <li><a href="courses.html">
+                <i class="fas fa-book"></i>
+                <span class="nav-item">Courses</span>
+            </a></li>
+            <li><a href="questions.html">
+                <i class="fas fa-file-circle-question"></i>
+                <span class="nav-item">Question bank</span>
+            </a></li>
+            <li><a href="notifications.html">
+                <i class="fas fa-bell"></i>
+                <span class="nav-item">Notifications</span>
+            </a></li>
+            <li><a href="settings.html">
+                <i class="fas fa-cog"></i>
+                <span class="nav-item">Settings</span>
+            </a></li>
+            <li><a href="faq.html">
+                <i class="fas fa-question-circle"></i>
+                <span class="nav-item">Help</span>
+            </a></li>
+            <li><a href="Login.html" class="logout">
+                <i class="fas fa-sign-out-alt"></i>
+                <span class="nav-item">Log out</span>
+            </a></li>
+        </ul>
+    </nav>
+<div class="q-test">
+    <h2>Solutions GCE 2021</h2>
+    <p>  Scroll down to find answers</p>
+</div>
+<div class="sec-1">
+    <div class="text-container">
+        <h2>Science</h2> 
+    </div>
+</div>
+
+<div class="sec-2-container">
+    <div class="sec-2">
+         <h4>Chemistry paper 1</h4>
+     <!-- Download button -->
+         <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+     
+     <!-- View button -->
+         <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+
+    <div class="sec-2">
+        <h4>Chemistry paper 2</h4>
+     <!-- Download button -->
+        <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+
+     <!-- View button -->
+        <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+
+    <div class="sec-2">
+        <h4>Chemistry paper 3</h4>
+     <!-- Download button -->
+        <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+
+     <!-- View button -->
+        <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+
+    <div class="sec-2">
+        <h4>Physics paper 1</h4>
+     <!-- Download button -->
+         <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+
+     <!-- View button -->
+        <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+
+    <div class="sec-2">
+        <h4>Physics paper 2</h4>
+     <!-- Download button -->
+        <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+
+     <!-- View button -->
+        <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+
+    <div class="sec-2">
+        <h4>Physics paper 3</h4>
+     <!-- Download button -->
+        <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+
+     <!-- View button -->
+        <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+
+    <div class="sec-2">
+        <h4>Mathematics paper 1</h4>
+     <!-- Download button -->
+        <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+
+     <!-- View button -->
+        <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+
+    <div class="sec-2">
+        <h4>Mathematics paper 2</h4>
+     <!-- Download button -->
+        <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+
+     <!-- View button -->
+        <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+
+    <div class="sec-2">
+        <h4>Mathematics with Mech</h4>
+     <!-- Download button -->
+        <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+
+     <!-- View button -->
+        <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+
+    <div class="sec-2">
+        <h4>Mathematics with Stats</h4>
+     <!-- Download button -->
+        <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+
+     <!-- View button -->
+        <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+
+    <div class="sec-2">
+        <h4>Biology paper 1</h4>
+     <!-- Download button -->
+        <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+
+     <!-- View button -->
+        <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+
+    <div class="sec-2">
+        <h4>Biology paper 2</h4>
+     <!-- Download button -->
+        <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+
+     <!-- View button -->
+        <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+
+    <div class="sec-2">
+        <h4>Biology paper 3</h4>
+     <!-- Download button -->
+        <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+
+     <!-- View button -->
+        <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+    <div class="sec-2">
+        <h4>Geology paper 1</h4>
+     <!-- Download button -->
+        <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+
+     <!-- View button -->
+        <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+
+    <div class="sec-2">
+        <h4>Geology paper 2</h4>
+     <!-- Download button -->
+        <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+
+     <!-- View button -->
+        <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+    <div class="sec-2">
+        <h4>Geology paper 3</h4>
+     <!-- Download button -->
+        <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+
+     <!-- View button -->
+        <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+
+    <div class="sec-2">
+        <h4>Food science paper 1</h4>
+     <!-- Download button -->
+        <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+
+     <!-- View button -->
+        <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+
+    <div class="sec-2">
+        <h4>Food science paper 2</h4>
+     <!-- Download button -->
+        <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+
+     <!-- View button -->
+        <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+
+    <div class="sec-2">
+        <h4>Food science paper 3</h4>
+     <!-- Download button -->
+        <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+
+     <!-- View button -->
+        <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+</div>
+
+<div class="sec-1">
+    <div class="text-container">
+        <h2>Arts</h2> 
+    </div>
+</div>
+
+<div class="sec-2-container">
+    <div class="sec-2">
+         <h4>English Language 1</h4>
+     <!-- Download button -->
+         <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+     
+     <!-- View button -->
+         <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+
+    <div class="sec-2">
+        <h4>English Language 2</h4>
+     <!-- Download button -->
+        <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+
+     <!-- View button -->
+        <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+
+    <div class="sec-2">
+        <h4>French 1</h4>
+     <!-- Download button -->
+        <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+
+     <!-- View button -->
+        <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+
+    <div class="sec-2">
+        <h4>French 2</h4>
+     <!-- Download button -->
+         <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+
+     <!-- View button -->
+        <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+
+    <div class="sec-2">
+        <h4>Literature paper 1</h4>
+     <!-- Download button -->
+        <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+
+     <!-- View button -->
+        <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+
+    <div class="sec-2">
+        <h4>Literature paper 2</h4>
+     <!-- Download button -->
+        <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+
+     <!-- View button -->
+        <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+
+    <div class="sec-2">
+        <h4>History paper 1</h4>
+     <!-- Download button -->
+        <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+
+     <!-- View button -->
+        <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+
+    <div class="sec-2">
+        <h4>History paper 2</h4>
+     <!-- Download button -->
+        <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+
+     <!-- View button -->
+        <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+
+    <div class="sec-2">
+        <h4>History paper 3</h4>
+     <!-- Download button -->
+        <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+
+     <!-- View button -->
+        <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+
+    <div class="sec-2">
+        <h4>Geography paper 1</h4>
+     <!-- Download button -->
+        <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+
+     <!-- View button -->
+        <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+
+    <div class="sec-2">
+        <h4>Geography paper 2</h4>
+     <!-- Download button -->
+        <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+
+     <!-- View button -->
+        <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+
+    <div class="sec-2">
+        <h4>Geography paper 3</h4>
+     <!-- Download button -->
+        <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+
+     <!-- View button -->
+        <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+
+    <div class="sec-2">
+        <h4>Religious studies paper 1</h4>
+     <!-- Download button -->
+        <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+
+     <!-- View button -->
+        <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+    <div class="sec-2">
+        <h4>Religious studies paper 2</h4>
+     <!-- Download button -->
+        <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+
+     <!-- View button -->
+        <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+
+    <div class="sec-2">
+        <h4>Economics paper 1</h4>
+     <!-- Download button -->
+        <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+
+     <!-- View button -->
+        <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+    <div class="sec-2">
+        <h4>Economics paper 2</h4>
+     <!-- Download button -->
+        <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+
+     <!-- View button -->
+        <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+
+    <div class="sec-2">
+        <h4>Commerce paper 1</h4>
+     <!-- Download button -->
+        <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+
+     <!-- View button -->
+        <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+
+    <div class="sec-2">
+        <h4>Commerce paper 2</h4>
+     <!-- Download button -->
+        <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+
+     <!-- View button -->
+        <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+
+    <div class="sec-2">
+        <h4>Commerce paper 3</h4>
+     <!-- Download button -->
+        <button onclick="downloadDocument('try_pdf.pdf')" class="but-22">Download<i class="fa-solid fa-download"></i></button>
+
+     <!-- View button -->
+        <button onclick="viewDocument('try_pdf.pdf')" class="but-22 view">View<i class="fa-solid fa-eye"></i></button>
+    </div>
+</div>
+<!-- Script to handle button actions -->
+<!-- Script to handle button actions -->
+<script>
+    function downloadDocument(fileName) {
+        // Replace 'pdfs/' with the path to your PDF files folder
+        const folderPath = 'pdfs/';
+        const filePath = folderPath + fileName;
+
+        const link = document.createElement('a');
+        link.setAttribute('download', fileName);
+        link.setAttribute('href', filePath);
+
+        link.click();
+    }
+
+    function viewDocument(fileName) {
+        // Replace 'pdfs/' with the path to your PDF files folder
+        const folderPath = 'pdfs/';
+        const filePath = folderPath + fileName;
+        
+        window.open(filePath, '_blank');
+    }
+</script>
+<button id="scrollToTopButton" onclick="scrollToTop()">
+    <i class="fa-solid fa-angle-up"></i>
+</button>
+
+<script>
+    // Function to scroll to the top of the page
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Add smooth scrolling behavior
+        });
+    }
+
+    // Show the scroll-to-top button when the user scrolls down
+    window.onscroll = function () {
+        scrollFunction();
+    };
+
+    function scrollFunction() {
+        var scrollToTopButton = document.getElementById("scrollToTopButton");
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollToTopButton.style.display = "block";
+        } else {
+            scrollToTopButton.style.display = "none";
+        }
+    }
+</script>  
+
+
+</body>
+</html>
